@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}book appointmnet{% endblock %}
+{% block content %}
+
+<div class="main-container">
+    <div class="pd-ltr-20">
+        
+        <div class="row">
+            <div class="col-xl-3 mb-30">
+                <div class="card-box height-100-p widget-style1">
+                    <div class="d-flex flex-wrap align-items-center">
+                        <div class="progress-data">
+                            <!-- <div id="chart"></div> -->
+                            <img src="{%  static 'vendors/images/login-img.png' %}" alt="">
+                        </div>
+                        <div class="widget-data">
+                            <div class="h4 mb-0">{{count_customer}}</div>
+                            <div class="weight-600 font-29">Total customers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 mb-30">
+                <div class="card-box height-100-p widget-style1">
+                    <div class="d-flex flex-wrap align-items-center">
+                        <div class="progress-data">
+                            <!-- <div id="chart2"></div> -->
+                            <img src="{%  static 'vendors/images/modal-img1.jpg' %}" alt="">
+
+                            
+                        </div>
+                        <div class="widget-data">
+                            <div class="h4 mb-0">{{cust_cool}}</div>
+                            <div class="weight-600 font-14">cool customers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 mb-30">
+                <div class="card-box height-100-p widget-style1">
+                    <div class="d-flex flex-wrap align-items-center">
+                        <div class="progress-data">
+                            <!-- <div id="chart3"></div> -->
+                            <img src="{%  static 'vendors/images/icon-cash.png' %}" alt="">
+
+                        </div>
+                        <div class="widget-data">
+                            <div class="h4 mb-0">{{cust_strong}}</div>
+                            <div class="weight-600 font-14">strong customers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 mb-30">
+                <div class="card-box height-100-p widget-style1">
+                    <div class="d-flex flex-wrap align-items-center">
+                        <div class="progress-data">
+                            <!-- <div id="chart4"></div> -->
+                            <img src="{%  static 'vendors/images/img5.jpg' %}" alt="">
+
+                        </div>
+                        <div class="widget-data">
+                            <div class="h4 mb-0">{{cust_intermediate}}</div>
+                            <div class="weight-600 font-14">Intermediate customers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-xl-8 mb-30">
+                <div class="card-box height-100-p pd-20">
+                    <h2 class="h4 mb-20">Activity</h2>
+                    <div id="chart5"></div>
+                </div>
+            </div>
+            <div class="col-xl-4 mb-30">
+                <div class="card-box height-100-p pd-20">
+                    <h2 class="h4 mb-20">Lead Target</h2>
+                    <div id="chart6"></div>
+                </div>
+            </div>
+        </div> -->
+       
+        <div class="card-box mb-30">
+            <h2 class="h4 pd-20">All customers  </h2>
+            <table class="data-table table nowrap">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">phone number</th>
+                        <th scope="col">Last call</th>
+                        <th scope="col">Next call</th>
+                        <th scope="col">Status </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cus in customer  %}
+                        <tr>
+                            <td>{{cus.name}}</td>
+                            <td>{{cus.title}}</td>
+                            <td>{{cus.address}}</td>
+                            <td>{{cus.phnumber}}</td>
+                            <td>{{cus.lastcall}}</td>
+                            <td>{{cus.nextcall}}</td>
+                            <td>{{cus.status}}</td>
+                          
+                            
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

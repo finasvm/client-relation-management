@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}book appointmnet{% endblock %}
+{% block content %}
+
+<div class="main-container">
+	<div class="pd-ltr-20 xs-pd-20-10">
+		<div class="min-height-200px">
+			
+
+				<!-- Default Basic Forms Start -->
+				<div class="pd-20 card-box mb-30">
+					<div class="clearfix">
+						<div class="pull-left">
+							<h4 class="text-blue h4">Add customer</h4>
+							<p class="mb-30"></p>
+						</div>
+						
+					</div>
+					<form method="post" action="" >
+						{% csrf_token %}
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Name</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" name="name1" type="text" placeholder="" required>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Title</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" name="title1" placeholder="" type="text" required>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Address</label>
+							<div class="col-sm-12 col-md-10">
+								<textarea class="form-control" name="address1" rows="4" cols="50" required></textarea>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Phone number</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" name="number1"  type="telephone" required>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Last call</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" name="date1" type="date" required>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Next call</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" name="date2"  type="date" >
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Status</label>
+							<div class="col-sm-12 col-md-10">
+								<select name="status1" class="custom-select col-12" required>
+									<option value="Strong">Strong</option>
+									<option value="intermdeiate">intermediate</option>
+									<option value="cool">cool</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label"></label>
+							<div class="col-sm-12 col-md-10">
+								<button class="btn-primary">Submit</button>
+							</div>
+						</div>
+					</form>
+					
+				</div>
+		</div>
+	</div>
+</div>
+				
+
+
+{% endblock %}
